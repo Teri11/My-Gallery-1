@@ -33,7 +33,6 @@ Or you can access the web application directly via this [LIVE LINK]().
 * Python 3
 * JavaScript
 * CSS
-* Shell
 *****
 ### License
 This project is under:  
