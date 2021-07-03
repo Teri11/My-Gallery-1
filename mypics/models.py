@@ -65,23 +65,40 @@ class Location(models.Model):
   title = models.CharField(max_length =50)
 
   def save_location(self):
-      self.save()
+    self.save()
 
   def delete_location(self):
       self.delete()
 
   def update_location(self, update):
-      self.title = update
-      self.save()
+    self.title = update
+    self.save()
 
   @classmethod
   def get_location_id(cls, id):
-      location_id = Location.objects.get(pk = id)
-      return location_id
+    location_id = Location.objects.get(pk = id)
+    return location_id
 
   def __str__(self):
-      return self.title
-
+    return self.title
 
 class Category(models.Model):
-  pass
+  title = models.CharField(max_length =50)
+
+  def save_category(self):
+    self.save()
+
+  def delete_category(self):
+    self.delete()
+
+  def update_category(self, update):
+    self.title = update
+    self.save()
+
+  @classmethod
+  def get_category_id(cls, id):
+    category_id = Category.objects.get(pk = id)
+    return category_id
+
+  def __str__(self):
+    return self.title
