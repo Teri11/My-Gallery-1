@@ -22,12 +22,8 @@
         <h2 class="text-success">{{ photo.title }}</h2>
         <p>{{ photo.description}}</p>
         <!--Display photos photo images  -->
-        <img src="{{photo.photo_image.url}}" class="img-responsive" alt="Image" onclick="window.open(this.src)">
-        <h3>Repository Link</h3>
-        <P><a href="{{photo.repo_link}}">{{photo.repo_link}}</a></P>
-        <h3>Live Link</h3>
-        <P><a href="{{photo.live_link}}">{{photo.live_link}}</a></P>
-        <p>Posted on: {{ photo.published_on}}</p>
+        <img src="{{photo.image.url}}" class="img-responsive" alt="Image" onclick="window.open(this.src)">
+        <p>Posted on: {{ photo.posted_at}}</p>
       </div>
       <div class="col-md-3"></div>
     </div>

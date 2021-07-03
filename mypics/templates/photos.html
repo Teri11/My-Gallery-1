@@ -12,7 +12,7 @@
     <!-- displaying photos photos -->
     <div class="col-md-6">
       <!--Display photos photo images  -->
-      <a href="{% url 'photos_item.detail' photos_item.id %}" class="open-photo"><img src="{{photos_item.photo_image.url}}" class="img-responsive" alt="Image"></a>
+      <a href="{% url 'photos_item.detail' photos_item.id %}" class="open-photo"><img src="{{photos_item.image.url}}" class="img-responsive" alt="Image"></a>
     </div>
     <div class="col-md-3"></div>
   </div>

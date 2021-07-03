@@ -1,3 +1,6 @@
+body {
+  font-size: 20px;
+}
 .photo {
   margin-bottom: 2rem;
 }
@@ -7,7 +10,7 @@ nav {
   padding-top: 1vh;
 }
 nav a {
-  color: #FFEFA1 !important;
+  color: #449D44 !important;
 }
 a {
   color: blue;
@@ -29,14 +32,14 @@ a {
   font-weight: 900;
 }
 .footer {
-  color: #FFEFA1 !important;
+  color: #449D44 !important;
 }
 .footer a {
-  color: #FFEFA1 !important;
+  color: #449D44 !important;
 }
 img {
   width: 100%;
 }
-body {
-  font-size: 20px;
+.pull-right, .subscribe {
+  color: white !important;
 }
