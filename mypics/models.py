@@ -24,6 +24,19 @@ class Photo(models.Model):
   owner = models.ForeignKey(Owner,on_delete=models.CASCADE)
   posted_at = models.DateTimeField(auto_now_add=True)
   image = CloudinaryField('image')
+  location = models.ForeignKey('Location')
+  category = models.ForeignKey('Category')
+
+  def save_photo(self):
+    self.save()
+
+  def delete_photo(self):
+    self.delete()
+
+  @classmethod
+  def update_image(cls, id ,title,description ,owner,image, location, category):
+    update = cls.objects.filter(id = id).update(title = title,description = description,owner=owner,image=image,location = location,category = category)
+    return update
 
   def __str__(self):
     return self.title
@@ -32,4 +45,4 @@ class Photo(models.Model):
   def search_photo_title(cls,search_term):
     search_photos = cls.objects.filter(title__icontains=search_term)
     return search_photos
-    
+

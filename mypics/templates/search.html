@@ -1,34 +1,30 @@
-{%extends 'base.html'%} 
+{%extends 'base.html'%}
 {% block content %}
 <div class="container-fluid">
 
-  <div class="row text-center">
+  <div class="text-center">
     {% if photos%}
-      <h1>Found {{ photos|length }} of searched term {{message}}</h1>
+    <h1>Found {{ photos|length }} of searched term {{message}}</h1>
     {% else %}
-      <h1> Found 0 photos for the search term {{message}}</h1>
+    <h1> Found 0 photos for the search term {{message}}</h1>
     {% endif %}
 
   </div>
-
-  <div class="row">
-
   {% if photos %}
-    {% for photo in photos %}
-    <div class="row photo">
-      <div class="col-md-2"></div>
-      <!-- displaying photos photos -->
-      <div class="col-md-6">
-        <h2 class="text-success">{{ photo.title }}</h2>
-        <p>{{ photo.description}}</p>
-        <!--Display photos photo images  -->
-        <img src="{{photo.image.url}}" class="img-responsive" alt="Image" onclick="window.open(this.src)">
-        <p>Posted on: {{ photo.posted_at}}</p>
-      </div>
-      <div class="col-md-3"></div>
+  {% for photo in photos %}
+  <div class="row photo">
+    <div class="col-md-3"></div>
+    <!-- displaying photos photos -->
+    <div class="col-md-6">
+      <h2 class="text-success">{{ photo.title }}</h2>
+      <p>{{ photo.description}}</p>
+      <!--Display photos photo images  -->
+      <img src="{{photo.image.url}}" class="img-responsive" alt="Image" onclick="window.open(this.src)">
+      <p>Posted on: {{ photo.posted_at}}</p>
     </div>
-    {% endfor %}
-  {% endif %}
+    <div class="col-md-3"></div>
   </div>
+  {% endfor %}
+  {% endif %}
 </div>
 {% endblock %}
