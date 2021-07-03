@@ -53,9 +53,6 @@ class Photo(models.Model):
     location = cls.objects.filter(location__id=location)
     return location
 
-  class Meta:
-      ordering = ['name']
-      
   def __str__(self):
     return self.title
 
@@ -64,3 +61,27 @@ class Photo(models.Model):
     search_photos = cls.objects.filter(title__icontains=search_term)
     return search_photos
 
+class Location(models.Model):
+  title = models.CharField(max_length =50)
+
+  def save_location(self):
+      self.save()
+
+  def delete_location(self):
+      self.delete()
+
+  def update_location(self, update):
+      self.title = update
+      self.save()
+
+  @classmethod
+  def get_location_id(cls, id):
+      location_id = Location.objects.get(pk = id)
+      return location_id
+
+  def __str__(self):
+      return self.title
+
+
+class Category(models.Model):
+  pass
