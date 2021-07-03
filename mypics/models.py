@@ -32,3 +32,4 @@ class Photo(models.Model):
   def search_photo_title(cls,search_term):
     search_photos = cls.objects.filter(title__icontains=search_term)
     return search_photos
+    

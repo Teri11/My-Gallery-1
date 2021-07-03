@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{% block content %} 
+{{ block.super}}
+
+<div class="container-fluid">
+
+  <!-- Looping through photos   -->
+  {% for photos_item in photos %}
+
+  <div class="row photo">
+    <div class="col-md-3"></div>
+    <!-- displaying photos photos -->
+    <div class="col-md-6">
+      <a href="{% url 'photos_item.detail' photos_item.id %}" class=""><h2 class="text-success link">{{ photos_item.title }}</h2></a>
+      <p>{{ photos_item.description}}</p>
+      <!--Display photos photo images  -->
+      <a href="{% url 'photos_item.detail' photos_item.id %}" class="open-photo"><img src="{{photos_item.photo_image.url}}" class="img-responsive" alt="Image"></a>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There is No photos Items</h2>
+  </div>
+  {% endfor %}
+
+</div>
+<script src="../static/js/script.js"></script>
+
+{% endblock %}
