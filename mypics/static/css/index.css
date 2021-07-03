@@ -1,0 +1,42 @@
+.photo {
+  margin-bottom: 2rem;
+}
+nav {
+  height: 8vh !important;
+  font-size: 25;
+  padding-top: 1vh;
+}
+nav a {
+  color: #FFEFA1 !important;
+}
+a {
+  color: blue;
+  font-weight: 900;
+}
+.open-project:hover {
+  opacity: 0.5;
+}
+.img-responsive {
+  cursor: pointer;
+  border-radius: 6px;
+}
+.img-responsive:hover {
+  opacity: 0.7;
+  background-color: #295168;
+}
+.link:hover {
+  color: blue;
+  font-weight: 900;
+}
+.footer {
+  color: #FFEFA1 !important;
+}
+.footer a {
+  color: #FFEFA1 !important;
+}
+img {
+  width: 100%;
+}
+body {
+  font-size: 20px;
+}
