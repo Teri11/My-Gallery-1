@@ -1,0 +1,38 @@
+{% load bootstrap3 %}
+{% load static %}
+{% load claudinary %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% if title %}
+  <title>Gallery - {{title}}</title>
+  {% else %}
+  <title>Awesome Gallery</title>
+  {% endif %}
+
+  {% block styles %}
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  {% endblock styles %}
+</head>
+<body>
+{% include "navbar.html" %}
+  {% block content %}
+  {% endblock content %}
+  <div class="navbar navbar-default footer">
+    <div class="container">
+      <p class="navbar-text pull-left">
+           <a href="" target="_blank" >© 2021 - Nicholas Ngetich.GALLERY</a>
+      </p>
+  
+      <a href="" class="navbar-btn btn-success btn pull-right">
+      <span class="glyphicon glyphicon-star"></span>  Subscribe</a>
+    </div>
+  </div>
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  {% endblock scripts %}
+</body>
+</html>
