@@ -18,3 +18,15 @@ def detail(request,photo_id):
   except ObjectDoesNotExist:
     raise Http404()
   return render(request, 'photo.html', {'photo':photo})
+
+def search_photos(request):
+  if 'photo' in request.GET and request.GET["photo"]:
+    search_term = request.GET.get("photo")
+    searched_photos = Photo.search_photo_title(search_term)
+    message = f"{search_term}"
+
+    return render(request, 'search.html', {"message":message,"photos":searched_photos})
+
+  else:
+    message = 'You have not searched for any term'
+    return render(request, 'search.html', {"message":message})
