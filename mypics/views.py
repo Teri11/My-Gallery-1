@@ -11,3 +11,10 @@ def home(request):
 def photos(request):
   photos =Photo.objects.all().order_by("-posted_at")
   return render(request,'photos.html',{'photos':photos})
+
+def detail(request,photo_id):
+  try:
+    photo = get_object_or_404(Photo, pk =photo_id)
+  except ObjectDoesNotExist:
+    raise Http404()
+  return render(request, 'photo.html', {'photo':photo})
