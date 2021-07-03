@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_object_or_404,redirect
 from django.http import HttpResponse,Http404
 import datetime as dt
-from .models import Photo
+from .models import Photo,Location,Category
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -10,9 +10,13 @@ def home(request):
 
 def photos(request):
   photos =Photo.objects.all().order_by("-posted_at")
-  return render(request,'photos.html',{'photos':photos})
+  location = Location.objects.all()
+  return render(request,'photos.html',{'photos':photos, 'location':location})
 
-def detail(request,photo_id):
+def detail(request,category_name,photo_id):
+  locations = Location.objects.all()
+  category = Photo.objects.filter(category__title = category_name)
+
   try:
     photo = get_object_or_404(Photo, pk =photo_id)
   except ObjectDoesNotExist:
