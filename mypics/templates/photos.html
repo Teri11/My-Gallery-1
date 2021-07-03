@@ -38,15 +38,13 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-md-9 col-lg-9">
-              <a href="{% url 'photos_item.detail' photos_item.id %}"><img id="img{{photos_item.id}}"
-                  src="{{photos_item.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
-
+              <img src="{{photos_item.image.url}}" class="img-responsive" alt="Image" onclick="window.open(this.src)">
             </div>
             <div class="col-md-3">
               <h4 class="desc">Location</h4>
-              <p>{{photos_item.image_location.name}}</p>
+              <p>{{photos_item.location.title}}</p>
               <h4 class="desc">Category</h4>
-              <p>{{photos_item.image_category.name}}</p>
+              <p>{{photos_item.category.title}}</p>
             </div>
             <div>
               <h2 class="desc">{{photos_item.title}}</h2>

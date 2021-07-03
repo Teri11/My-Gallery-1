@@ -13,15 +13,14 @@ def photos(request):
   location = Location.objects.all()
   return render(request,'photos.html',{'photos':photos, 'location':location})
 
-def detail(request,category_name,photo_id):
+def detail(request,photo_id):
   locations = Location.objects.all()
-  category = Photo.objects.filter(category__title = category_name)
 
   try:
     photo = get_object_or_404(Photo, pk =photo_id)
   except ObjectDoesNotExist:
     raise Http404()
-  return render(request, 'photo.html', {'photo':photo})
+  return render(request, 'photo.html', {'photo':photo,"locations":locations})
 
 def search_photos(request):
   if 'photo' in request.GET and request.GET["photo"]:
@@ -34,3 +33,9 @@ def search_photos(request):
   else:
     message = 'You have not searched for any term'
     return render(request, 'search.html', {"message":message})
+
+def view_photos_by_location(request, photo_location):
+    locations = Location.objects.all()
+    location = Location.get_location_id(photo_location)
+    photos = Photo.filter_by_location(photo_location)
+    return render(request, 'location.html', {'photos':photos, 'locations':locations, 'location':location})
