@@ -3,7 +3,6 @@ from django.http import HttpResponse,Http404
 import datetime as dt
 from .models import Photo,Location,Category
 from django.core.exceptions import ObjectDoesNotExist
-import pyperclip
 
 # Create your views here.
 def home(request):
