@@ -9,6 +9,8 @@ urlpatterns = [
   path('photo/<int:photo_id>',views.detail,name='photos_item.detail'),
   path('home/',views.filter_home_photos,name='home'),
   path('campus/',views.filter_campus_photos,name='campus'),
+  path('moringa/',views.filter_moringa_photos,name='moringa'),
+  path('nyeri/',views.filter_nyeri_photos,name='nyeri'),
   path('search/',views.search_photos, name='searchPhotos')
 ]
 

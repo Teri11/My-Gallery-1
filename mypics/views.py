@@ -47,3 +47,17 @@ def filter_home_photos(request):
   except ObjectDoesNotExist:
     raise Http404()
   return render(request, 'locations.html', {'photos':photos})
+
+def filter_moringa_photos(request):
+  try:
+    photos = Photo.objects.filter(location =3)
+  except ObjectDoesNotExist:
+    raise Http404()
+  return render(request, 'locations.html', {'photos':photos})
+
+def filter_nyeri_photos(request):
+  try:
+    photos = Photo.objects.filter(location =4)
+  except ObjectDoesNotExist:
+    raise Http404()
+  return render(request, 'locations.html', {'photos':photos})
