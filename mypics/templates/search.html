@@ -31,30 +31,29 @@
   </div>
   {% for photos_item in photos %}
   <div class="modal fade" id="{{photos_item.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" style="width: 40%;" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h2 class="desc">{{photos_item.title}}</h2>
-            <h4>{{photos_item.description}}</h4>
-            <h4>Location: <span class="category">{{photos_item.location.title}}</span></h4>
-            <h4>Category: <span class="category">{{photos_item.category.title}}</span></h4>
-          <button type="button" style="display: inline;" class="btn btn-success"
-            onclick="copy('img{{photos_item.id}}')">Copy photo Link</button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="">
-              <img src="{{photos_item.image.url}}" class="img-thumbnail" alt="Image" onclick="window.open(this.src)">
-            </div>
+  aria-hidden="true">
+  <div class="modal-dialog" style="width: 40%;" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h2 class="desc">{{photos_item.title}}</h2>
+          <h4>{{photos_item.description}}</h4>
+          <h4>Location: <span class="category">{{photos_item.location.title}}</span></h4>
+          <h4>Category: <span class="category">{{photos_item.category.title}}</span></h4>
+          Photo URL:<input type="text" value="{{photos_item.image.url}}" class="btn btn-success form-control photoUrl">
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="">
+            <img src="{{photos_item.image.url}}" class="img-thumbnail" alt="Image" onclick="window.open(this.src)">
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
   {% endfor %}
   {% endif %}
 </div>

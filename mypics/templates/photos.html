@@ -38,9 +38,7 @@
             <h4>{{photos_item.description}}</h4>
             <h4>Location: <span class="category">{{photos_item.location.title}}</span></h4>
             <h4>Category: <span class="category">{{photos_item.category.title}}</span></h4>
-            <p>Photo URL: <span id="copyUrl">{{photos_item.image.url}}</span></p>
-          <button type="button" id="copyButton" style="display: inline;" class="btn btn-success"
-            onclick="copyToClipBoard()">Copy photo Link</button>
+            Photo URL:<input type="text" value="{{photos_item.image.url}}" class="btn btn-success form-control photoUrl">
         </div>
         <div class="modal-body">
           <div class="row">
