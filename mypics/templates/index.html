@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="text-center">Welcome to My Cool Gallery Website</h1>
+<div class="carousel-inner">
+  <h1 class="text-center banner">Welcome to My Gallery Website</h1>
+  <div id="launcher">
+    <a href="{% url 'allPhotos' %}" class="button">Photos <span>&#8594;</span></a>
+  </div>
+</div>
+
 {% endblock content %}

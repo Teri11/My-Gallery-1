@@ -49,3 +49,43 @@ img {
 .pull-right, .subscribe {
   color: white !important;
 }
+.menu {
+  color: white !important;
+}
+.carousel-inner {
+  height: 80vh;
+  background-image: url('https://res.cloudinary.com/dbos9xidr/image/upload/v1625440961/windows2_avbnls.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.slide {
+  width: auto;
+}
+.banner {
+padding-top: 8%;
+color: #058F03;
+}
+#launcher {
+  padding-top: 400px;
+  text-align: center;
+  align-items: center;
+}
+#launcher a {
+  background-color: white;
+  border:solid 8px #058F03;
+  color: #058F03;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  margin: 4px 4px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+#launcher a:hover {
+  background-color: #058F03;
+  border:solid 8px #295168;
+  color: white;
+}
