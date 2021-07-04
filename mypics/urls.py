@@ -11,7 +11,7 @@ urlpatterns = [
   path('campus/',views.filter_campus_photos,name='campus'),
   path('moringa/',views.filter_moringa_photos,name='moringa'),
   path('nyeri/',views.filter_nyeri_photos,name='nyeri'),
-  path('search/',views.search_photos, name='searchPhotos')
+  path('search/',views.search_photos_category, name='searchPhotos')
 ]
 
 if settings.DEBUG:

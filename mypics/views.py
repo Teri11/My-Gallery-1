@@ -22,10 +22,10 @@ def detail(request,photo_id):
     raise Http404()
   return render(request, 'photo.html', {'photo':photo,"locations":locations})
 
-def search_photos(request):
+def search_photos_category(request):
   if 'photo' in request.GET and request.GET["photo"]:
     search_term = request.GET.get("photo")
-    searched_photos = Photo.search_photo_title(search_term)
+    searched_photos = Photo.search_photos_by_category(search_term)
     message = f"{search_term}"
 
     return render(request, 'search.html', {"message":message,"photos":searched_photos})
@@ -33,7 +33,7 @@ def search_photos(request):
   else:
     message = 'You have not searched for any term'
     return render(request, 'search.html', {"message":message})
-
+    
 def filter_campus_photos(request):
   try:
     photos = Photo.objects.filter(location =2)
