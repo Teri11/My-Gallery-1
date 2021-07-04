@@ -16,6 +16,23 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <a class="navbar-brand" href="{% url 'homePage' %}">Home</a>
         <a class="navbar-brand" href="{% url 'allPhotos' %}">Photos</a>
+        <!-- Split button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-success">Locations</button>
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="{% url 'campus' %}" class="">Campus Photos</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="{% url 'home' %}" class="">Home Photos</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
         <ul class="nav navbar-nav navbar-right">
           <li>
             <form class="navbar-form" role="search" action="{% url 'searchPhotos' %}">
