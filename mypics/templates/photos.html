@@ -38,13 +38,14 @@
             <h4>{{photos_item.description}}</h4>
             <h4>Location: <span class="category">{{photos_item.location.title}}</span></h4>
             <h4>Category: <span class="category">{{photos_item.category.title}}</span></h4>
-          <button type="button" style="display: inline;" class="btn btn-success"
-            onclick="copy('img{{photos_item.id}}')">Copy photo Link</button>
+            <p>Photo URL: <span id="copyUrl">{{photos_item.image.url}}</span></p>
+          <button type="button" id="copyButton" style="display: inline;" class="btn btn-success"
+            onclick="copyToClipBoard()">Copy photo Link</button>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="">
-              <img src="{{photos_item.image.url}}" alt="Image" onclick="window.open(this.src)">
+              <img src="{{photos_item.image.url}}" class="img-thumbnail" alt="Image" onclick="window.open(this.src)">
             </div>
           </div>
         </div>
