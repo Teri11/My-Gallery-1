@@ -40,3 +40,10 @@ def filter_campus_photos(request):
   except ObjectDoesNotExist:
     raise Http404()
   return render(request, 'locations.html', {'photos':photos})
+
+def filter_home_photos(request):
+  try:
+    photos = Photo.objects.filter(location =1)
+  except ObjectDoesNotExist:
+    raise Http404()
+  return render(request, 'locations.html', {'photos':photos})
