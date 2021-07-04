@@ -16,15 +16,21 @@ a {
   color: blue;
   font-weight: 900;
 }
+h2 {
+  color: #449D44;
+}
+.category {
+  color: #058F03;
+}
 .open-project:hover {
   opacity: 0.5;
 }
-.img-responsive {
+.img-thumbnail {
   cursor: pointer;
   border-radius: 6px;
 }
-.img-responsive:hover {
-  opacity: 0.7;
+.img-thumbnail:hover {
+  opacity: 0.9;
   background-color: #295168;
 }
 .link:hover {
