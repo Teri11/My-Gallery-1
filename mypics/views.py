@@ -34,9 +34,9 @@ def search_photos(request):
     message = 'You have not searched for any term'
     return render(request, 'search.html', {"message":message})
 
-def view_photos_by_location(request, photo_location):
+def filter_campus_photos(request):
   try:
-    photos = Photo.get_object_or_404(Photo, pk =photo_location)
+    photos = Photo.objects.filter(location =2)
   except ObjectDoesNotExist:
     raise Http404()
-  return render(request, 'location.html', {'photos':photos})
+  return render(request, 'locations.html', {'photos':photos})

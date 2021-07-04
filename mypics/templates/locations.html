@@ -15,7 +15,10 @@
       <a class="img-overlay" data-toggle="modal" data-target="#{{photos_item.id}}" style="width:100%"><img
           src="{{photos_item.image.url}}" class="img-responsive" alt="Image"></a>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <h2>Locations</h2>
+      <a href="{% url 'campus' %}" class=""><h2 class="text-success link">Campus Place</h2></a>
+    </div>
   </div>
 
   {% empty %}
@@ -30,30 +33,29 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title" id="deleteModalLabel">{{photos_item.title}}</h2>
+          <h2 class="desc">{{photos_item.title}}</h2>
+          <button type="button" style="display: inline;" class="btn btn-secondary" onclick="copy('img{{photos_item.id}}')">Copy photo Link</button>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-md-9 col-lg-9">
+            <div class="">
               <img src="{{photos_item.image.url}}" style="width: 100%;" class="img-responsive" alt="Image" onclick="window.open(this.src)">
             </div>
-            <div class="col-md-3">
-              <h4 class="desc">Location</h4>
-              <p>{{photos_item.location.title}}</p>
-              <h4 class="desc">Category</h4>
-              <p>{{photos_item.category.title}}</p>
-            </div>
-            <div>
-              <h2 class="desc">{{photos_item.title}}</h2>
-              <p class="desc">{{photos_item.description}}</p>
+            <div class="row">
+                <p class="text-center">{{photos_item.description}}</p>
+              <div class="col-md-6">
+                <h4 class="desc">Location: <span category>{{photos_item.location.title}}</span></h4>
+              </div>
+              <div class="col-md-6">
+                <h4 class="desc">Category: <span category>{{photos_item.category.title}}</span></h4>
+              </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="copy('img{{photos_item.id}}')">Copy Link</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
