@@ -9,7 +9,7 @@
     <div class="col-md-10">
       <!-- Looping through photos   -->
       {% for photos_item in photos %}
-      <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 gal-item">
         <!--Display photos photo images  -->
         <a data-toggle="modal" data-target="#{{photos_item.id}}"><img src="{{photos_item.image.url}}"
             class="img-thumbnail" alt="Image"></a>
@@ -28,7 +28,7 @@
   {% for photos_item in photos %}
   <div class="modal fade" id="{{photos_item.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" style="width: 40%;" role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
