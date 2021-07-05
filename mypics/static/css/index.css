@@ -29,6 +29,9 @@ h2 {
   cursor: pointer;
   border-radius: 6px;
 }
+.gal-item {
+  float: left !important;
+}
 .img-thumbnail:hover {
   opacity: 0.9;
   background-color: #295168;
