@@ -9,7 +9,7 @@
     <div class="col-md-10">
       <!-- Looping through photos   -->
       {% for photos_item in photos %}
-      <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="col-md-3 col-sm-6">
         <!--Display photos photo images  -->
         <a data-toggle="modal" data-target="#{{photos_item.id}}"><img src="{{photos_item.image.url}}"
             class="img-thumbnail" alt="Image"></a>
@@ -28,17 +28,17 @@
   {% for photos_item in photos %}
   <div class="modal fade" id="{{photos_item.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" style="width: 40%;" role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
           <h2 class="desc">{{photos_item.title}}</h2>
-            <h4>{{photos_item.description}}</h4>
-            <h4>Location: <span class="category">{{photos_item.location.title}}</span></h4>
-            <h4>Category: <span class="category">{{photos_item.category.title}}</span></h4>
-            Photo URL:<input type="text" value="{{photos_item.image.url}}" class="btn btn-success form-control photoUrl">
+          <h4>{{photos_item.description}}</h4>
+          <h4>Location: <span class="category">{{photos_item.location.title}}</span></h4>
+          <h4>Category: <span class="category">{{photos_item.category.title}}</span></h4>
+          Photo URL:<input type="text" value="{{photos_item.image.url}}" class="btn btn-success form-control photoUrl">
         </div>
         <div class="modal-body">
           <div class="row">
