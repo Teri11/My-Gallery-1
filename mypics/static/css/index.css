@@ -16,7 +16,7 @@ a {
   color: blue;
   font-weight: 900;
 }
-h2 {
+h2,h1 {
   color: #449D44;
 }
 .category {
