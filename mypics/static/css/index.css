@@ -54,7 +54,6 @@ img {
 }
 .menu {
   color: white !important;
-  margin-bottom: 5px !important;
 }
 .carousel-inner {
   height: 80vh;
@@ -71,7 +70,7 @@ padding-top: 8%;
 color: #058F03;
 }
 #launcher {
-  padding-top: 400px;
+  padding-top: 5%;
   text-align: center;
   align-items: center;
 }
@@ -99,6 +98,6 @@ color: #058F03;
     padding-top: 1vh;
   }
   .menu {
-    margin-bottom: 5px !important;
+    color: white !important;
   }
 }
