@@ -76,18 +76,23 @@ class Photo(models.Model):
     self.delete()
 
   @classmethod
-  def update_photo(cls, id ,title,description ,owner,image, location, category):
-    update = cls.objects.filter(id = id).update(title = title,description = description,owner=owner,image=image,location = location,category = category)
+  def update_photo(cls, id ,title,description ,owner, location, category):
+    update = cls.objects.filter(id = id).update(title = title,description = description,owner=owner,location = location,category = category)
     return update
 
   @classmethod
-  def get_photo_by_id(cls,id):
-    photo = cls.objects.filter(id= id).all()
-    return photo
+  def get_all_photos(cls):
+    photos = cls.objects.all()
+    return photos
 
   @classmethod
-  def filter_photo_by_location(cls, location):
-    location = cls.objects.filter(location__id=location)
+  def get_photo_id(cls,id):
+    photo_id = cls.objects.filter(id= id).all()
+    return photo_id
+
+  @classmethod
+  def filter_photo_by_location(cls,location):
+    photos = Photo.objects.filter(location__title__icontains=location)
     return location
 
   @classmethod
