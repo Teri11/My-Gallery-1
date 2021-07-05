@@ -9,7 +9,7 @@
     <div class="col-md-10">
       <!-- Looping through photos   -->
       {% for photos_item in photos %}
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 gal-item">
+      <div class="col-lg-3 col-md-6">
         <!--Display photos photo images  -->
         <a data-toggle="modal" data-target="#{{photos_item.id}}"><img src="{{photos_item.image.url}}"
             class="img-thumbnail" alt="Image"></a>
