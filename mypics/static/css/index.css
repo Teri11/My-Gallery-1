@@ -54,6 +54,7 @@ img {
 }
 .menu {
   color: white !important;
+  margin-bottom: 5px !important;
 }
 .carousel-inner {
   height: 80vh;
@@ -93,5 +94,11 @@ color: #058F03;
   color: white;
 }
 @media (max-width: 1000px) {
-
+  nav {
+    height: auto !important;
+    padding-top: 1vh;
+  }
+  .menu {
+    margin-bottom: 5px !important;
+  }
 }
