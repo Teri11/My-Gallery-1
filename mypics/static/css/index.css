@@ -55,19 +55,19 @@ img {
 .menu {
   color: white !important;
 }
-.carousel-inner {
-  height: 80vh;
+.banner {
+  height: 60vh;
   background-image: url('https://res.cloudinary.com/dbos9xidr/image/upload/v1625440961/windows2_avbnls.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  
+}
+.name {
+  padding-top: 8%;
+  color: #058F03;
+  text-align: center;
 }
 .slide {
   width: auto;
-}
-.banner {
-padding-top: 8%;
-color: #058F03;
 }
 #launcher {
   padding-top: 5%;
@@ -100,4 +100,8 @@ color: #058F03;
   .menu {
     color: white !important;
   }
+  .banner {
+    height: auto;
+  }
+  
 }
