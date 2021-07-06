@@ -1,26 +1,12 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from django.http import HttpResponse, Http404,HttpResponseRedirect
+from django.http import HttpResponse,Http404
 import datetime as dt
-from .email import send_welcome_email
-from .models import Photo,Location,Category,NewsLetterRecipients
+from .models import Photo,Location,Category
 from django.core.exceptions import ObjectDoesNotExist
-from .forms import NewsLetterForm
-
 
 # Create your views here.
 def home(request):
-  if request.method == 'POST':
-    form = NewsLetterForm(request.POST)
-    if form.is_valid():
-      name = form.cleaned_data['your_name']
-      email = form.cleaned_data['email']
-      recipient = NewsLetterRecipients(name = name,email =email)
-      recipient.save()
-      send_welcome_email(name,email)
-      HttpResponseRedirect('news_today')
-  else:
-    form = NewsLetterForm()
-  return render(request, 'index.html',{"letterForm":form})
+  return render(request, 'index.html')
 
 def photos(request):
   photos =Photo.objects.all().order_by("-posted_at")
