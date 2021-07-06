@@ -27,9 +27,7 @@ The user can also click on the image URL and it will be copied to machine clipbo
 ![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625553740/Screenshot_from_2021-07-06_09-41-15_ov93ex.png)
 *****
 ![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625553894/Screenshot_from_2021-07-06_09-44-26_cetgzi.png)
-### User functions
 *****
-![alt text](https://github.com/ngetichnicholas/Password-Locker/blob/main/images/user-class-functions.png)
 ### Search Function
 With the search function, a user can search images with keywords hike,selfie,travel,operating,coding and food to filter images by respective categories.
 *****
