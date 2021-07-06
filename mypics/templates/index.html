@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load bootstrap3 %}
 {% block content %}
 <div class="carousel-inner">
   <h1 class="text-center banner">Welcome to My Gallery Website</h1>
@@ -6,5 +7,19 @@
     <a href="{% url 'allPhotos' %}" class="button">Photos <span>&#8594;</span></a>
   </div>
 </div>
+<div class="row" id="email">
+  <div class="col-md-3"></div>
+  <div class="col-md-6" style="margin-top: 1cm;">
+    <form action="{%url 'homePage'%}" method="post">
+      {%csrf_token%}
 
+      {% bootstrap_form letterForm layout='inline' %}
+      <button type="submit" class="navbar-btn btn-success btn">
+        <span class="glyphicon glyphicon-star subscribe"></span>Subscribe</button>
+    </form>
+  </div>
+  <div class="col-md-3"></div>
+
+
+</div>
 {% endblock content %}

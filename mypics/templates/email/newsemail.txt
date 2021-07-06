@@ -1,0 +1,6 @@
+Hello {{name}}
+
+Welcome to my Gallery. Here you will get to see my photo posts
+
+Regards,
+Nicholas Ngetich
