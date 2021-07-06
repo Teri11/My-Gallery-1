@@ -16,6 +16,9 @@ To access this project on your local files, you can clone it using these steps
 1. Use this command to clone $ git clone https://github.com/ngetichnicholas/My-Gallery.git
 1. This will clone the repositoty into your local folder
 *****
+### Admin Site
+There is an admin site to manage the application resources like adding photos, updating photos,deleting and managing location and categories
+![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625555259/Screenshot_from_2021-07-06_09-14-57_lfqbds.png)
 ### View Gallery photo items
 A user can go to photos page and where all photos available will be displayed. The user can also select to view photos from different locations
 ![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625552653/Screenshot_from_2021-07-06_09-16-48_lmi3no.png)
