@@ -1,28 +1,29 @@
 {%extends 'base.html'%}
-{% load bootstrap3 %}
 {% block content %}
 {{ block.super}}
-
 <div class="container-fluid">
-  <div class="text-center">
-    {% if photos%}
-    <h1>Found {{ photos|length }} of searched term {{message}}</h1>
-    {% else %}
-    <h1> Found 0 photos for the search term {{message}}</h1>
-    {% endif %}
-
-  </div>
+  {% if photos%}
+  <h2 class="text-center">Found {{ photos|length }} of searched term {{message}}</h2>
+{% else %}
+  <h2 class="text-center"> Found 0 photos for the search term {{message}}</h2>
+{% endif %}
+</div>
+<div class="container-fluid">
   <div class="row photo">
     <div class="col-md-1"></div>
     <!-- displaying photos photos -->
     <div class="col-md-10">
       <!-- Looping through photos   -->
-      {% if photos %}
       {% for photos_item in photos %}
-      <div class="col-md-3 col-sm-6 gal-item">
+      <div class="col-md-3 col-sm-6">
         <!--Display photos photo images  -->
         <a data-toggle="modal" data-target="#{{photos_item.id}}"><img src="{{photos_item.image.url}}"
             class="img-thumbnail" alt="Image"></a>
+      </div>
+
+      {% empty %}
+      <div class="row">
+        <h2 class="text-center">There is No photos Items</h2>
       </div>
       {% endfor %}
 
@@ -57,6 +58,5 @@
     </div>
   </div>
   {% endfor %}
-  {% endif %}
 </div>
 {% endblock %}
