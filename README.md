@@ -16,6 +16,25 @@ To access this project on your local files, you can clone it using these steps
 1. Use this command to clone $ git clone https://github.com/ngetichnicholas/My-Gallery.git
 1. This will clone the repositoty into your local folder
 *****
+### View Gallery photo items
+A user can go to photos page and where all photos available will be displayed. The user can also select to view photos from different locations
+![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625552653/Screenshot_from_2021-07-06_09-16-48_lmi3no.png)
+*****
+### View Photo details and copy URL to clipboard
+A user can click on any image and a modal will be displayed containing the photo information like title, description, photo url and date posted.  
+The user can also click on the image URL and it will be copied to machine clipboard.
+*****
+![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625553740/Screenshot_from_2021-07-06_09-41-15_ov93ex.png)
+*****
+![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625553894/Screenshot_from_2021-07-06_09-44-26_cetgzi.png)
+### User functions
+*****
+![alt text](https://github.com/ngetichnicholas/Password-Locker/blob/main/images/user-class-functions.png)
+### Search Function
+With the search function, a user can search images with keywords hike,selfie,travel,operating,coding and food to filter images by respective categories.
+*****
+![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625552943/Screenshot_from_2021-07-06_09-27-14_mfnjnc.png)
+*****
 ### Live Link
 Or you can access the web application directly via this [LIVE LINK]().
 ******
