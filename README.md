@@ -45,7 +45,7 @@ With the search function, a user can search images with keywords hike,selfie,tra
    - OUTPUT: Photos belonging to that category is displayed in the page
 1. Show photo details
    - INPUT: Image is clicked
-   - OUTPUT: A model pop up with image details
+   - OUTPUT: A modal pop up with image details
 1. Provides a copy function for image URL
    - INPUT: Photo URL is clicked
    - OUTPUT: The image link copied to machine clipboard
