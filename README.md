@@ -36,6 +36,20 @@ With the search function, a user can search images with keywords hike,selfie,tra
 ### Live Link
 Or you can access the web application directly via this [LIVE LINK]().
 ******
+## Behaviour Driven Development
+1. Provides a dropdown button to select location 
+   - INPUT: Click on location option
+   - OUTPUT: Photos belonging to that particular location displayed in the page
+1. Provides a search form
+   - INPUT: Category keyword entered in the search field
+   - OUTPUT: Photos belonging to that category is displayed in the page
+1. Show photo details
+   - INPUT: Image is clicked
+   - OUTPUT: A model pop up with image details
+1. Provides a copy function for image URL
+   - INPUT: Photo URL is clicked
+   - OUTPUT: The image link copied to machine clipboard
+
 ## Dependencies
 * django-bootstrap
 * Pillow
