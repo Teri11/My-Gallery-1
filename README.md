@@ -33,9 +33,6 @@ With the search function, a user can search images with keywords hike,selfie,tra
 *****
 ![alt text](https://res.cloudinary.com/dbos9xidr/image/upload/v1625552943/Screenshot_from_2021-07-06_09-27-14_mfnjnc.png)
 *****
-### Live Link
-Or you can access the web application directly via this [LIVE LINK]().
-******
 ## Behaviour Driven Development
 1. Provides a dropdown button to select location 
    - INPUT: Click on location option
@@ -64,6 +61,9 @@ Or you can access the web application directly via this [LIVE LINK]().
 * Python 3
 * JavaScript
 * CSS
+******
+### Live Link
+Or you can access the web application directly via this [LIVE LINK](https://nick-gallery.herokuapp.com/).
 *****
 ### License
 This project is under:  
